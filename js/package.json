@@ -1,0 +1,29 @@
+{
+  "name": "switchboard-play",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/big.js": "^6.1.3",
+    "@types/node": "^17.0.21",
+    "axios": "^0.26.1",
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2"
+  },
+  "dependencies": {
+    "@solana/spl-token": "^0.2.0",
+    "@solana/web3.js": "^1.36.0",
+    "@switchboard-xyz/switchboard-v2": "^0.0.67",
+    "@types/bn.js": "^5.1.0",
+    "big.js": "^6.1.1",
+    "bn.js": "^5.2.0"
+  }
+}
