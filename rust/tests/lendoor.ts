@@ -21,5 +21,8 @@ describe("lendoor", () => {
       }
     });
     console.log("Your transaction signature", tx);
+
+    //read logs at:
+    //https://solscan.io/tx/56rKbk8H1MQihEWvXdo5isNSP7DGH2EgpfScFGPdWGT5BYRFC4ac4CYeLQvJud6cLcntqaisgPfk8zMbKB41L4rm?cluster=devnet
   });
 });
