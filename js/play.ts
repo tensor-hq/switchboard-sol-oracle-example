@@ -36,7 +36,8 @@ const play = async () => {
   const kp = Keypair.fromSecretKey(Uint8Array.from(require('/Users/ilmoi/.config/solana/play.json')));
   const prog = await loadAnchor(kp);
 
-  const aggregatorAccount = new AggregatorAccount({program: prog, publicKey: new PublicKey("4SExTkRKKA8pxLZn78QiMfAernJma1BBtTc7KFJDFf4J")});
+  //TODO replace the aggregator key with your own
+  const aggregatorAccount = new AggregatorAccount({program: prog, publicKey: new PublicKey("8VD9EJ4njJfH1o2X2a8HLrx93Qa5noNGYt3qhyzcVZ1S")});
   const result: Big = await aggregatorAccount.getLatestValue() as Big;
 
   console.log(result.toNumber());

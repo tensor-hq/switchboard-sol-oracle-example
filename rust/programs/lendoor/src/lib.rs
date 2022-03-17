@@ -3,7 +3,7 @@ use anchor_lang::prelude::*;
 use std::convert::TryInto;
 pub use switchboard_v2::AggregatorAccountData;
 
-declare_id!("5eXF5XFaQSffW8JiCR2T5rPvuHjaMx5rjTvsgYmxQDvr");
+declare_id!("HX7h7LUQ61ztLgXg4Hh4fqnvuWSuf1vVoh7SMdtarpiU");
 
 #[program]
 pub mod lendoor {

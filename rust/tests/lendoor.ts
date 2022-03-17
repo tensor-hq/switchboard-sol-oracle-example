@@ -8,17 +8,16 @@ describe("lendoor", () => {
 
   const payer = Keypair.fromSecretKey(Uint8Array.from(require("/Users/ilmoi/.config/solana/play.json")));
   const provider = new Provider(new Connection("https://api.devnet.solana.com"), new Wallet(payer), {})
-  const program = new Program<Lendoor>(require("../target/idl/lendoor.json"), "5eXF5XFaQSffW8JiCR2T5rPvuHjaMx5rjTvsgYmxQDvr", provider);
+  const program = new Program<Lendoor>(require("../target/idl/lendoor.json"), "HX7h7LUQ61ztLgXg4Hh4fqnvuWSuf1vVoh7SMdtarpiU", provider);
 
   it("Lends like a baws", async () => {
     const tx = await program.rpc.gimmeLoan(undefined, {
       accounts: {
-        aggregator: new PublicKey("7Hxk7MdJCcrvGDs7RPvvj6oqUxPZ7oLRio6dCNqD3Akj")
+        //TODO replace the aggregator key with your own
+        aggregator: new PublicKey("8VD9EJ4njJfH1o2X2a8HLrx93Qa5noNGYt3qhyzcVZ1S")
       }
     });
-    console.log("Your transaction signature", tx);
-
-    //read logs at:
-    //https://solscan.io/tx/56rKbk8H1MQihEWvXdo5isNSP7DGH2EgpfScFGPdWGT5BYRFC4ac4CYeLQvJud6cLcntqaisgPfk8zMbKB41L4rm?cluster=devnet
+    console.log('SUCCESS!')
+    console.log(`Go to this link and read the logs: https://solscan.io/tx/${tx}?cluster=devnet`);
   });
 });
